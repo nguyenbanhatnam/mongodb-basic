@@ -38,39 +38,83 @@
    db.users.find({email:{$exists:true}})
    ```
 - Find all users whose name starts with a specific letter.
-   > db.users.find()
+   ```javascript
+   db.users.find({email:{$exists:true}})
+   ```
 - Find all users sorted by their age in descending order.
-   > db.users.find().sort({age:-1})
+   ```javascript
+   db.users.find().sort({age:-1})
+   ```
 - Find the oldest user.
-   > db.users.find().sort({age:-1}).limit(1)
+   ```javascript
+   db.users.find().sort({age:-1}).limit(1)
+   ```
+   OR
+   ```javascript
+   db.users.findOne({},{sort:{age:-1}})
+   ```
 
 3. **Indexing:**
    - Create an index on the "age" field.
+   ```javascript
+   ```
    - Create a compound index on the "name" and "email" fields.
+   ```javascript
+   ```
 
 4. **Aggregation:**
    - Calculate the average age of all users.
+   ```javascript
+   ```
    - Group users by their age and count how many users are in each age group.
+   ```javascript
+   ```
    - Find the user with the highest age.
+   ```javascript
+   ```
    - Find the user with the lowest age.
+   ```javascript
+   ```
    - Calculate the total age of all users.
+   ```javascript
+   ```
 
 5. **Data Modeling:**
    - Design a schema for a blog application including collections for users, posts, and comments. Define relationships between these collections.
+   ```javascript
+   ```
    - Implement the schema in MongoDB, including necessary indexes.
+   ```javascript
+   ```
 
 6. **Advanced Queries:**
    - Find users who have commented on a specific post.
+   ```javascript
+   ```
    - Find posts created by users who are older than 25.
+   ```javascript
+   ```
    - Find all comments made on posts created in the last month.
+   ```javascript
+   ```
    - Find users who have not posted anything yet.
+   ```javascript
+   ```
 
 7. **Data Import/Export:**
    - Import user data from a JSON file into your MongoDB database.
+   ```javascript
+   ```
    - Export the "users" collection to a JSON file.
+   ```javascript
+   ```
 
 8. **Replication and Sharding:**
    - Set up replication for your MongoDB instance.
+   ```javascript
+   ```
    - Configure sharding for your database.
+   ```javascript
+   ```
 
 These exercises cover a range of MongoDB functionalities and will help you gain proficiency with MongoDB. Feel free to modify or expand upon them based on your learning goals and interests.
