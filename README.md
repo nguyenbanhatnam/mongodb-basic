@@ -1,27 +1,47 @@
 1. **Basic CRUD Operations:**
-   - Create a new database called "mydatabase".
-   > use mydatabase
-   - Create a collection called "users".
-   > db.createCollection("users")
-   - Insert a few documents (user data) into the "users" collection.
-   > db.users.insertMany([{name:"Nam", age:23}, {name:"Dat", age:23}, {name:"Duy", age:23}, {name:"Tam", age:23}])
-   - Retrieve all documents from the "users" collection.
-   > db.users.find()
-   - Update a document in the "users" collection.
-   > db.users.updateOne({name:"Nam"},{$set:{IsHandsome:true}})
-   - Delete a document from the "users" collection.
-   > db.users.deleteOne({name:"Tam"})
+- Create a new database called "mydatabase".
+    ```javascript
+    use mydatabase
+    ```
+- Create a collection called "users".
+   ```javascript
+   db.createCollection("users")
+   ```
+- Insert a few documents (user data) into the "users" collection.
+   ```javascript
+   db.users.insertMany([
+    {name:"Nam", age:23}, 
+    {name:"Dat", age:23}, 
+    {name:"Duy", age:23}, 
+    {name:"Tam", age:23}])
+    ```
+- Retrieve all documents from the "users" collection.
+   ```javascript
+   db.users.find()
+   ```
+- Update a document in the "users" collection.
+   ```javascript
+   db.users.updateOne({name:"Nam"},{$set:{IsHandsome:true}})
+   ```
+- Delete a document from the "users" collection.
+   ```javascript
+   db.users.deleteOne({name:"Tam"})
+   ```
 
 2. **Querying:**
-   - Find all users who are older than 30.
-   > db.users.find({age:{$gt:30}})
-   - Find all users who have a specific email address.
-   > db.users.find({email:{$exists:true}})
-   - Find all users whose name starts with a specific letter.
+- Find all users who are older than 30.
+   ```javascript
+   db.users.find({age:{$gt:30}})
+   ```
+- Find all users who have a specific email address.
+   ```javascript
+   db.users.find({email:{$exists:true}})
+   ```
+- Find all users whose name starts with a specific letter.
    > db.users.find()
-   - Find all users sorted by their age in descending order.
+- Find all users sorted by their age in descending order.
    > db.users.find().sort({age:-1})
-   - Find the oldest user.
+- Find the oldest user.
    > db.users.find().sort({age:-1}).limit(1)
 
 3. **Indexing:**
